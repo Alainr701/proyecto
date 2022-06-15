@@ -1,0 +1,68 @@
+* {
+    font-family: Lucidatypewriter, monospace;
+}
+
+:root {
+    --color-primario: rgba(13, 91, 146, 0.8);  /*Color celeste*/
+    --color-listas: rgba(5, 5, 5, 1);
+    --tamaño-listas: 21px;
+}
+
+/*body{
+    background: url(../img/1.png);
+    background-repeat: no-repeat;
+    background-size: auto; 
+} */
+.navegacion{
+    position:absolute;
+    z-index: 1;
+}
+.carousel{
+    position:relative;
+    /*z-index: 1;*/
+} 
+
+.testim{
+ height: 100%;
+ width: 100%;
+ object-fit: contain;
+}
+
+.btn-group:hover .dropdown-menu{
+display:block;
+}
+
+.estiloPie {
+    /*position:fixed;*/ /*Para mantener el pie de pagína estático*/  
+    bottom: 0;
+    margin-top: -10px;
+    width: 100%;
+    background-color: rgba(13, 91, 146, 1);
+    padding: 1.5%;
+    font-size: 18px;
+    color: #fff;
+}
+
+.estiloPie img{
+    position: absolute;
+}
+.estiloPie h3{
+    position: relative;
+    left: 120px;
+    /*margin-top: 10px;*/
+    font-size: 1em;
+    margin-right: 150px;
+}
+
+.estiloPie h5{
+    position: relative;
+    margin-top: 30px;
+    font-size: 19px;
+    left: 120px;
+    margin-right: 150px;
+}
+
+.lista1, .lista2, .lista3, .lista4, .lista5{ 
+    color: var(--color-listas);
+    font-size: var(--tamaño-listas);
+}

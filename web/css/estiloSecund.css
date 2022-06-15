@@ -1,0 +1,62 @@
+* {
+    font-family: Lucidatypewriter, monospace;
+}
+
+:root {
+  --color-primario: rgba(13, 91, 146, 0.8); /*Color celeste*/
+  --color-listas: rgba(5, 5, 5, 1);
+  --tamaño-listas: 21px;
+}
+
+.costo{
+  display: flex;
+  justify-content: center;
+}
+
+.btn-group:hover .dropdown-menu{
+display:block;
+}
+
+.estiloPie {
+    position:fixed; /*Para mantener el pie de pagína estático*/
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(13, 91, 146, 0.8);
+    padding: 1.5%;
+    font-size: 18px;
+    color: #fff;
+}
+.estiloPie h3{
+    position: relative;
+    left: 390px;
+    margin-top: 14px;
+    font-size: 1em;
+}
+
+.lista1, .lista2, .lista3, .lista4, .lista5{ 
+    color: var(--color-listas);
+    font-size: var(--tamaño-listas);
+}
+
+.sec1{
+    background: url(../img/barra.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding-left: 50px;
+}
+
+.sec2{
+    font-size: 18px;
+    padding: 40px 80px 110px 450px;
+}
+
+.sec3{
+    font-size: 18px;
+    padding: 40px 680px 40px 150px;
+}
+
+.sec4{
+    font-size: 18px;
+    padding: 40px 150px 40px 680px;
+}

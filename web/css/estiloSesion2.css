@@ -1,0 +1,133 @@
+* {
+    font-family: Lucidatypewriter, monospace;
+}
+
+:root {
+  --color-primario: rgba(13, 91, 146, 0.8); /*Color celeste*/
+  --color-listas: rgba(5, 5, 5, 1);
+  --tamaño-listas: 17px;
+}
+
+body{
+    background: url(../img/prof1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.btn-group:hover .dropdown-menu{
+display:block;
+}
+
+.estiloPie {
+    position:fixed; /*Para mantener el pie de pagína estático*/
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(13, 91, 146, 0.8);
+    padding: 1.5%;
+    font-size: 18px;
+    color: #fff;
+}
+.estiloPie h3{
+    position: relative;
+    left: 390px;
+    margin-top: 14px;
+    font-size: 1em;
+}
+
+.lista1, .lista2, .lista3, .lista4, .lista5{ 
+    color: var(--color-listas);
+    font-size: var(--tamaño-listas);
+}
+
+.sec1{
+    background: url(img/barra.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding-left: 50px;
+}
+
+.sec2{
+    font-size: 18px;
+    padding: 40px 80px 110px 450px;
+}
+
+.sec3{
+    font-size: 18px;
+    padding: 40px 680px 40px 150px;
+}
+
+.sec4{
+    font-size: 18px;
+    padding: 40px 150px 40px 680px;
+}
+
+input{
+	color: #ffffff;
+}
+
+.container-404{
+	width: 400px;
+	height: 340px;
+	left: 50%;
+	top: 50%;
+	margin: auto;
+	background: rgba(15, 45, 15, 0.4);
+	margin: auto;
+	margin-top: 160px;
+	box-shadow: 7px 13px 37px #000;
+	padding:20px 30px ; 
+	border-top: 4px solid rgba(45, 205, 45, 0.8);;
+	color: white;
+
+	position: absolute;
+	animation: keyframes_aparecer_de_arriba 1s;
+  animation-fill-mode:forwards;
+
+	-ms-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.form-login h5{
+	margin: 0;
+	text-align: center;
+	height: 40px;
+	margin-bottom:30px;
+	border-bottom: 1px solid;
+	font-size: 20px;
+}
+
+.controls{
+	width: 100%;
+	border: 1px solid #017bab;
+	margin-bottom: 15px;
+	padding: 11px 10px;
+	background: #252323;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.buttons{
+	width: 100%;
+	height: 40px;
+	background: rgba(34, 177, 76, 0.8);
+	border: none;
+	color: white;
+	margin-bottom: 16px;
+}
+
+.selec{
+	position: absolute;
+	color: white;
+	/*text-align: center;*/
+}
+/* Color al pasar el cursor sobre el vinculo */
+.selec:hover {
+    background-color: rgb(255, 253, 253);  
+}
+
+/* Color al presionar sobre el vinculo */
+.selec:active {
+    background-color: rgb(255, 253, 253);  
+}
