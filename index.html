@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZanaFresh | Jugo de Zanahoria en Sachets</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons (Versión Standalone) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Configuración Tailwind Personalizada -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              carrot: {
+                50: '#fff7ed',
+                100: '#ffedd5',
+                500: '#f97316',
+                600: '#ea580c',
+                700: '#c2410c',
+              },
+              nature: {
+                500: '#22c55e',
+                600: '#16a34a',
+                900: '#14532d',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      /* Estilos adicionales si fueran necesarios */
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-stone-50 text-stone-800 antialiased selection:bg-carrot-200 selection:text-carrot-900">
+
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <div class="bg-carrot-500 p-2 rounded-full text-white">
+              <i data-lucide="carrot" class="w-6 h-6"></i>
+            </div>
+            <span class="font-bold text-2xl text-stone-800 tracking-tight">Zana<span class="text-carrot-600">Fresh</span></span>
+          </div>
+          
+          <!-- Desktop Menu -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-8">
+              <a href="#inicio" class="text-stone-600 hover:text-carrot-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Inicio</a>
+              <a href="#introduccion" class="text-stone-600 hover:text-carrot-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre Nosotros</a>
+              <a href="#producto" class="text-stone-600 hover:text-carrot-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">El Producto</a>
+              <a href="#alcances" class="text-stone-600 hover:text-carrot-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Alcances y Límites</a>
+              <a href="#contacto" class="text-stone-600 hover:text-carrot-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contacto</a>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <div class="-mr-2 flex md:hidden">
+            <button id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-stone-600 hover:text-carrot-600 focus:outline-none">
+              <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#inicio" class="mobile-link text-stone-600 hover:text-carrot-600 block px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+          <a href="#introduccion" class="mobile-link text-stone-600 hover:text-carrot-600 block px-3 py-2 rounded-md text-base font-medium">Sobre Nosotros</a>
+          <a href="#producto" class="mobile-link text-stone-600 hover:text-carrot-600 block px-3 py-2 rounded-md text-base font-medium">El Producto</a>
+          <a href="#alcances" class="mobile-link text-stone-600 hover:text-carrot-600 block px-3 py-2 rounded-md text-base font-medium">Alcances y Límites</a>
+          <a href="#contacto" class="mobile-link text-stone-600 hover:text-carrot-600 block px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      
+      <!-- Hero Section -->
+      <section id="inicio" class="relative pt-28 lg:pt-36 pb-16 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(#f97316_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+              <div class="inline-block px-4 py-2 bg-carrot-100 text-carrot-700 rounded-full text-sm font-semibold">
+                Innovación Saludable
+              </div>
+              <h1 class="text-4xl lg:text-6xl font-bold text-stone-900 leading-tight">
+                Energía Natural en cada <span class="text-carrot-600">Sachet</span>
+              </h1>
+              <p class="text-lg text-stone-600 leading-relaxed">
+                Jugo de zanahoria 100% natural, diseñado para tu estilo de vida activo. 
+                Nutrición, practicidad y frescura en un formato innovador.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#contacto" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-carrot-600 hover:bg-carrot-700 md:py-4 md:text-lg transition-all shadow-lg hover:shadow-xl">
+                  Contáctanos
+                  <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </a>
+                <a href="#introduccion" class="inline-flex items-center justify-center px-8 py-3 border border-stone-300 text-base font-medium rounded-lg text-stone-700 bg-white hover:bg-stone-50 md:py-4 md:text-lg transition-all">
+                  Saber más
+                </a>
+              </div>
+            </div>
+            
+            <div class="relative">
+              <div class="absolute -inset-4 bg-carrot-500/20 rounded-full blur-3xl"></div>
+              <img 
+                src="https://picsum.photos/id/1080/600/600" 
+                alt="Jugo de Zanahoria Fresco" 
+                class="relative rounded-2xl shadow-2xl w-full object-cover aspect-square transform hover:scale-105 transition-transform duration-500"
+              />
+              <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs z-20">
+                <p class="font-bold text-stone-800 text-lg">100% Natural</p>
+                <p class="text-stone-500 text-sm">Sin conservantes ni azúcares añadidos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Context / Info Section -->
+      <section id="introduccion" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-stone-900 sm:text-4xl">Contexto del Proyecto</h2>
+            <p class="mt-4 text-xl text-stone-500">Fundamentos de nuestra iniciativa emprendedora</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 mb-20">
+            <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-3 mb-4">
+                <i data-lucide="book-open" class="text-carrot-600 w-7 h-7"></i>
+                <h3 class="text-2xl font-bold text-stone-800">Introducción</h3>
+              </div>
+              <p class="text-stone-600 text-justify leading-relaxed">
+                Desarrollamos un emprendimiento de jugo de zanahoria en sachets, respondiendo a las tendencias actuales de consumo saludable, accesibilidad y practicidad. Integramos un enfoque de evaluación formativa para asegurar la calidad y aceptación en el mercado. Buscamos demostrar la viabilidad de este producto como una alternativa saludable y competitiva frente a bebidas artificiales.
+              </p>
+            </div>
+
+            <div class="bg-stone-50 p-8 rounded-2xl border border-stone-100">
+              <div class="flex items-center gap-3 mb-4">
+                <i data-lucide="alert-circle" class="text-carrot-600 w-7 h-7"></i>
+                <h3 class="text-2xl font-bold text-stone-800">Comprensión del Problema</h3>
+              </div>
+              <p class="text-stone-600 text-justify leading-relaxed">
+                Existe una limitada disponibilidad de bebidas naturales y nutritivas en formatos prácticos y de bajo costo. Muchos productos actuales contienen aditivos o exceso de azúcar. Los consumidores enfrentan dificultades de tiempo y portabilidad. Nuestro jugo en sachet soluciona esto combinando nutrición, practicidad y un precio accesible.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-carrot-50 rounded-3xl p-8 lg:p-12">
+            <div class="flex items-center gap-3 mb-8 justify-center">
+              <i data-lucide="target" class="text-carrot-700 w-8 h-8"></i>
+              <h3 class="text-3xl font-bold text-carrot-900 text-center">Objetivos de la Investigación</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+              <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h4 class="font-bold text-lg text-carrot-800 mb-2">Objetivo General</h4>
+                <p class="text-stone-600">
+                  Desarrollar una propuesta de emprendimiento basada en la elaboración y comercialización de jugo de zanahoria en sachets, fundamentada en criterios nutricionales, técnicos y de evaluación formativa.
+                </p>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h4 class="font-bold text-lg text-carrot-800 mb-2">Objetivos Específicos</h4>
+                <ul class="list-disc list-inside space-y-2 text-stone-600">
+                  <li>Analizar beneficios nutricionales y relevancia.</li>
+                  <li>Diseñar el proceso de producción y empaque.</li>
+                  <li>Identificar límites y alcances de la propuesta.</li>
+                  <li>Evaluar viabilidad técnica y comercial.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section id="producto" class="py-20 bg-stone-900 text-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="lg:text-center mb-16">
+            <h2 class="text-base text-carrot-500 font-semibold tracking-wide uppercase">Fundamentación Teórica</h2>
+            <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+              Diseño, Nutrición y Practicidad
+            </p>
+            <p class="mt-4 max-w-2xl text-xl text-stone-400 lg:mx-auto">
+              Basado en estudios de mercado y ergonomía, nuestro producto integra funcionalidad y estética.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <div class="p-6 bg-stone-800 rounded-xl hover:bg-stone-750 transition-colors">
+              <div class="w-12 h-12 bg-carrot-600 rounded-lg flex items-center justify-center mb-4">
+                <i data-lucide="leaf" class="text-white w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Nutrición Natural</h3>
+              <p class="text-stone-400">Alto contenido de betacarotenos, vitamina B y antioxidantes. Sin aditivos artificiales.</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="p-6 bg-stone-800 rounded-xl hover:bg-stone-750 transition-colors">
+              <div class="w-12 h-12 bg-nature-600 rounded-lg flex items-center justify-center mb-4">
+                <i data-lucide="zap" class="text-white w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Practicidad</h3>
+              <p class="text-stone-400">Envase sachet ergonómico, fácil de abrir, transportar y consumir en cualquier lugar.</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="p-6 bg-stone-800 rounded-xl hover:bg-stone-750 transition-colors">
+              <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <i data-lucide="shield-check" class="text-white w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Seguridad</h3>
+              <p class="text-stone-400">Material de grado alimentario, resistente y sellado herméticamente para garantizar inocuidad.</p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="p-6 bg-stone-800 rounded-xl hover:bg-stone-750 transition-colors">
+              <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+                <i data-lucide="droplet" class="text-white w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Evaluación Continua</h3>
+              <p class="text-stone-400">Mejora constante basada en retroalimentación sobre sabor, textura y presentación.</p>
+            </div>
+          </div>
+
+          <div class="mt-20 grid lg:grid-cols-2 gap-12 items-center">
+            <img 
+              src="https://picsum.photos/id/431/800/600" 
+              alt="Proceso de Calidad" 
+              class="rounded-2xl shadow-2xl opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <div class="space-y-6">
+                <h3 class="text-2xl font-bold text-white">Elaboración de la Propuesta</h3>
+                <p class="text-stone-300">
+                    El proceso parte de la identificación de necesidades, continúa con la producción (extracción, filtrado, pasteurización) y culmina con el envasado.
+                </p>
+                <div class="bg-stone-800 p-6 rounded-xl border-l-4 border-carrot-500">
+                    <h4 class="font-bold text-white mb-2">Criterios de Éxito</h4>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-stone-400 text-sm">
+                        <li>• Calidad Sensorial (Sabor/Color)</li>
+                        <li>• Aporte Vitamínico</li>
+                        <li>• Diseño Funcional</li>
+                        <li>• Precio Competitivo</li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Scope Section -->
+      <section id="alcances" class="py-20 bg-stone-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-stone-900 sm:text-4xl">Alcances y Límites</h2>
+            <p class="mt-4 text-xl text-stone-500">Transparencia y estructura de nuestra investigación</p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Alcances -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-nature-600 transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="check-circle-2" class="text-nature-600 w-8 h-8"></i>
+                <h3 class="text-2xl font-bold text-stone-800">1.5.1 Alcances</h3>
+              </div>
+              <div class="prose text-stone-600">
+                <p class="mb-4">
+                  El presente estudio se enfoca en el <strong>diseño conceptual del emprendimiento</strong>. Abarca:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="w-1.5 h-1.5 mt-2 bg-nature-500 rounded-full flex-shrink-0"></span>
+                    <span>Análisis teórico y estructura del proceso productivo.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-1.5 h-1.5 mt-2 bg-nature-500 rounded-full flex-shrink-0"></span>
+                    <span>Fundamentos nutricionales de la zanahoria.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-1.5 h-1.5 mt-2 bg-nature-500 rounded-full flex-shrink-0"></span>
+                    <span>Diseño del empaque en sachet y criterios de calidad.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-1.5 h-1.5 mt-2 bg-nature-500 rounded-full flex-shrink-0"></span>
+                    <span>Estudio preliminar de mercado meta y tendencias saludables.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Límites -->
+            <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-carrot-600 transform hover:-translate-y-1 transition-transform duration-300">
+              <div class="flex items-center gap-3 mb-6">
+                <i data-lucide="x-circle" class="text-carrot-600 w-8 h-8"></i>
+                <h3 class="text-2xl font-bold text-stone-800">1.5.2 Límites</h3>
+              </div>
+              <div class="prose text-stone-600">
+                <p class="mb-4">
+                  El estudio mantiene las siguientes delimitaciones para garantizar su viabilidad académica y operativa:
+                </p>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="w-1.5 h-1.5 mt-2 bg-carrot-500 rounded-full flex-shrink-0"></span>
+                    <span>No incluye pruebas de laboratorio avanzadas ni análisis microbiológicos.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-1.5 h-1.5 mt-2 bg-carrot-500 rounded-full flex-shrink-0"></span>
+                    <span>No desarrolla proyecciones financieras complejas o planes de inversión a gran escala.</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="w-1.5 h-1.5 mt-2 bg-carrot-500 rounded-full flex-shrink-0"></span>
+                    <span>La propuesta es conceptual, sustentada en fundamentos teóricos y metodológicos.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conclusions Section -->
+      <section class="py-16 bg-white border-y border-stone-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+          <h2 class="text-2xl font-bold text-stone-900 mb-6">Nuestra Conclusión</h2>
+          <p class="text-stone-600 italic text-lg leading-relaxed">
+            "El emprendimiento de jugo de zanahoria en sachets es viable técnica y conceptualmente. 
+            La presentación en sachets representa una ventaja competitiva por su practicidad y economía, 
+            posicionándose como una alternativa ideal para fomentar hábitos de vida saludables en el mercado local."
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contacto" class="bg-stone-900 text-stone-300">
+      
+      <!-- Main Contact Area -->
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid lg:grid-cols-2 gap-12">
+          
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-3xl font-bold text-white mb-4">Contáctanos</h2>
+              <p className="text-stone-400 mb-8">
+                ¿Interesado en distribuir ZanaFresh o quieres probar nuestros sachets? Escríbenos.
+              </p>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <i data-lucide="map-pin" class="text-carrot-500 mt-1 w-5 h-5 flex-shrink-0"></i>
+                <div>
+                  <h4 class="text-white font-semibold">Ubicación</h4>
+                  <p>Av. Emprendedores 123, Zona Comercial</p>
+                  <p class="text-sm">Ciudad Central, CP 5000</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <i data-lucide="phone" class="text-carrot-500 w-5 h-5 flex-shrink-0"></i>
+                <div>
+                  <h4 class="text-white font-semibold">Teléfono</h4>
+                  <p>+51 987 654 321</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <i data-lucide="mail" class="text-carrot-500 w-5 h-5 flex-shrink-0"></i>
+                <div>
+                  <h4 class="text-white font-semibold">Email</h4>
+                  <p>contacto@zanafresh.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <i data-lucide="clock" class="text-carrot-500 w-5 h-5 flex-shrink-0"></i>
+                <div>
+                  <h4 class="text-white font-semibold">Horario</h4>
+                  <p>Lun - Vie: 8:00 AM - 6:00 PM</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 flex gap-4">
+              <a href="#" class="p-2 bg-stone-800 rounded-full hover:bg-carrot-600 transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+              <a href="#" class="p-2 bg-stone-800 rounded-full hover:bg-carrot-600 transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+              <a href="#" class="p-2 bg-stone-800 rounded-full hover:bg-carrot-600 transition-colors"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+            </div>
+          </div>
+
+          <!-- Map / Location Visual -->
+          <div class="bg-stone-800 rounded-2xl p-4 h-full min-h-[300px] flex flex-col">
+            <h3 class="text-white font-bold mb-4 flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-5 h-5"></i> Nuestra Ubicación
+            </h3>
+            <!-- Simulated Map -->
+            <div class="flex-grow w-full bg-stone-700 rounded-xl overflow-hidden relative group">
+              <img 
+                src="https://picsum.photos/id/10/800/600" 
+                alt="Mapa de Ubicación" 
+                class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="bg-carrot-600 text-white px-4 py-2 rounded-lg shadow-lg transform -translate-y-4">
+                  <p class="font-bold flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Planta Principal</p>
+                </div>
+              </div>
+            </div>
+             <p class="mt-4 text-sm text-stone-500 italic">
+                *Distribución a puntos de venta locales, gimnasios y escuelas.
+             </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-stone-800 bg-stone-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-sm text-stone-500">© 2024 ZanaFresh. Todos los derechos reservados.</p>
+          <div class="flex gap-6 text-sm text-stone-500">
+            <a href="#" class="hover:text-carrot-500">Privacidad</a>
+            <a href="#" class="hover:text-carrot-500">Términos</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main Logic Script -->
+    <script>
+      // Inicializar Iconos Lucide
+      lucide.createIcons();
+
+      // Lógica del Menú Móvil
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+
+      let isMenuOpen = false;
+
+      // Toggle Menu
+      mobileMenuBtn.addEventListener('click', () => {
+        isMenuOpen = !isMenuOpen;
+        if (isMenuOpen) {
+          mobileMenu.classList.remove('hidden');
+          // Cambiar icono a X (opcional, requeriría re-renderizar el icono o manipular el SVG)
+          // Por simplicidad, mantenemos el icono de menú o cambiamos el color
+          mobileMenuBtn.classList.add('text-carrot-600');
+        } else {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.classList.remove('text-carrot-600');
+        }
+      });
+
+      // Cerrar menú al hacer clic en un enlace
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          isMenuOpen = false;
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
